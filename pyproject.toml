@@ -44,8 +44,12 @@ test = [
   "pytest >=9",
   "pytest-cov >=7",
 ]
+examples = [
+  "textual >=1.0",
+]
 dev = [
   { include-group = "test" },
+  { include-group = "examples" },
 ]
 docs = [
     "zensical>=0.0.20",
@@ -146,6 +150,7 @@ ignore = [
 py-version = "3.10"
 ignore-paths = [".*/_version.py"]
 reports.output-format = "colorized"
+basic.good-names = ["bar"]  # Axes.bar is a real name here, not a placeholder
 similarities.ignore-imports = "yes"
 messages_control.disable = [
   "design",
