@@ -87,6 +87,11 @@ disallow_untyped_defs = false
 disallow_incomplete_defs = false
 
 [[tool.mypy.overrides]]
+# The examples dir is not type-checked, so tests import it untyped
+module = "app"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
 module = "agentic_ai_example.*"
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
