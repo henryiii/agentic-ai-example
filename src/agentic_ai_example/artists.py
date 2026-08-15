@@ -5,10 +5,14 @@ from __future__ import annotations
 import abc
 import dataclasses
 import itertools
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
-from .canvas import RGB, Canvas
 from .colormap import VIRIDIS, Colormap
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
+    from .canvas import RGB, Canvas
 
 __all__ = ["Artist", "Bars", "Bounds", "HeatMap", "Line", "Transform"]
 

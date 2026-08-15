@@ -56,6 +56,10 @@ docs = [
 ]
 
 
+[tool.uv]
+exclude-newer = "7 days"
+
+
 [tool.pytest]
 minversion = "9.0"
 addopts = ["-ra", "--showlocals"]

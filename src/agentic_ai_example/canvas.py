@@ -59,9 +59,13 @@ class Canvas:
                     if current != (None, None):
                         parts.append(RESET)
                     if cell.fg is not None:
-                        parts.append(f"\x1b[38;2;{cell.fg[0]};{cell.fg[1]};{cell.fg[2]}m")
+                        parts.append(
+                            f"\x1b[38;2;{cell.fg[0]};{cell.fg[1]};{cell.fg[2]}m"
+                        )
                     if cell.bg is not None:
-                        parts.append(f"\x1b[48;2;{cell.bg[0]};{cell.bg[1]};{cell.bg[2]}m")
+                        parts.append(
+                            f"\x1b[48;2;{cell.bg[0]};{cell.bg[1]};{cell.bg[2]}m"
+                        )
                     current = colors
                 parts.append(cell.char)
             if current != (None, None):
