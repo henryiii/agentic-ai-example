@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
 from .artists import Artist, Bars, Bounds, HeatMap, Line, Transform
 from .canvas import RGB, Canvas
 from .colormap import VIRIDIS, Colormap
 from .ticks import format_ticks, nice_ticks
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
 
 __all__ = ["Axes", "Figure"]
 

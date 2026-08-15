@@ -41,6 +41,8 @@ def format_ticks(ticks: list[float]) -> list[str]:
         return [f"{t:g}" for t in ticks]
     step = abs(ticks[1] - ticks[0]) if len(ticks) > 1 else abs(ticks[0])
     decimals = 0
-    while decimals < 10 and abs(step * 10**decimals - round(step * 10**decimals)) > 1e-9:
+    while (
+        decimals < 10 and abs(step * 10**decimals - round(step * 10**decimals)) > 1e-9
+    ):
         decimals += 1
     return [f"{t:.{decimals}f}" for t in ticks]

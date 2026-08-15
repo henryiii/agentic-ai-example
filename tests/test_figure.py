@@ -38,7 +38,8 @@ def test_bar_figure():
     fig.ax.bar([3, 1, 2])
     out = strip(str(fig))
     assert "█" in out
-    assert "0" in out and "2" in out  # nice_ticks(0, 3, 3) -> [0, 2]
+    assert "0" in out
+    assert "2" in out
 
 
 def test_imshow_figure():

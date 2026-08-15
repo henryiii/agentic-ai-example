@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
-from .canvas import RGB
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
+    from .canvas import RGB
 
 __all__ = ["VIRIDIS", "Colormap"]
 
